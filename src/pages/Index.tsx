@@ -36,7 +36,7 @@ const Index = () => {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
-                  <Link to="/events">
+                  <Link to="/activities">
                     View Events
                     <Calendar className="ml-2" size={20} />
                   </Link>
@@ -159,7 +159,7 @@ const Index = () => {
                       <p><strong>Price:</strong> {event.price}</p>
                     </div>
                     <Button className="w-full mt-4" asChild>
-                      <Link to="/events">Register Now</Link>
+                      <Link to="/booking">Register Now</Link>
                     </Button>
                   </CardContent>
                 </div>

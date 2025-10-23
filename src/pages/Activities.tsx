@@ -102,7 +102,7 @@ const Activities = () => {
                       <Link to="/booking">Book Now</Link>
                     </Button>
                     <Button variant="outline" asChild>
-                      <Link to={`/activities/${activity.id}`}>Details</Link>
+                      <Link to="/booking">Details</Link>
                     </Button>
                   </div>
                 </CardContent>

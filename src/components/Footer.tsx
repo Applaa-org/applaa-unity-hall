@@ -8,7 +8,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Activities', href: '/activities' },
-    { name: 'Events', href: '/events' },
+    { name: 'Events', href: '/activities' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Testimonials', href: '/testimonials' },
     { name: 'Contact', href: '/contact' }
@@ -16,9 +16,9 @@ const Footer = () => {
 
   const services = [
     { name: 'Room Booking', href: '/booking' },
-    { name: 'Membership', href: '/membership' },
-    { name: 'Volunteer', href: '/volunteer' },
-    { name: 'Donate', href: '/donate' }
+    { name: 'Membership', href: '/booking' },
+    { name: 'Volunteer', href: '/contact' },
+    { name: 'Donate', href: '/contact' }
   ];
 
   const socialLinks = [
@@ -156,15 +156,15 @@ const Footer = () => {
               © 2024 Unity Hall Community Centre. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+              </a>
+              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              </a>
+              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import {import { showSuccess } from '@/utils/toast';
+import { showSuccess } from '@/utils/toast';
 
 const Booking = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ const Booking = () => {
     lastName: '',
     email: '',
     phone: '',
-    bookingType: 'activity',
+    bookingType: 'activity' as 'activity' | 'facility' | 'enquiry',
     activity: '',
     facility: '',
     date: '',
@@ -219,7 +219,7 @@ const Booking = () => {
                       </Select>
                     </div>
 
-                    {formData.bookingType !== 'enquiry' && (
+                    {formData.bookingType === 'activity' || formData.bookingType === 'facility' ? (
                       <>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div className="space-y-2">
@@ -283,7 +283,7 @@ const Booking = () => {
                           </div>
                         </div>
                       </>
-                    )}
+                    ) : null}
                   </CardContent>
                 </Card>
               )}
