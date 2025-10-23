@@ -12,11 +12,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Index from "./pages/Index";
 import { Layout } from './components/layout/Layout.tsx';
-import About from './pages/About';
-import Services from './pages/Services';
-import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import About from "./pages/About";
+import Activities from "./pages/Activities";
+import Booking from "./pages/Booking";
+import Gallery from "./pages/Gallery";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -54,16 +56,28 @@ const aboutRoute = createTanStackRoute({
   component: About,
 })
 
-const servicesRoute = createTanStackRoute({
+const activitiesRoute = createTanStackRoute({
   getParentRoute: () => layoutRoute,
-  path: '/services',
-  component: Services,
+  path: '/activities',
+  component: Activities,
+})
+
+const bookingRoute = createTanStackRoute({
+  getParentRoute: () => layoutRoute,
+  path: '/booking',
+  component: Booking,
 })
 
 const galleryRoute = createTanStackRoute({
   getParentRoute: () => layoutRoute,
   path: '/gallery',
   component: Gallery,
+})
+
+const testimonialsRoute = createTanStackRoute({
+  getParentRoute: () => layoutRoute,
+  path: '/testimonials',
+  component: Testimonials,
 })
 
 const contactRoute = createTanStackRoute({
@@ -77,8 +91,10 @@ const routeTree = rootRoute.addChildren([
   layoutRoute.addChildren([
     indexRoute,
     aboutRoute,
-    servicesRoute,
+    activitiesRoute,
+    bookingRoute,
     galleryRoute,
+    testimonialsRoute,
     contactRoute,
   ]),
 ])
